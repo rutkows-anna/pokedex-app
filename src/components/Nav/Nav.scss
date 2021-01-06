@@ -1,0 +1,58 @@
+.navbar {
+  width: 100%;
+  padding: $primary-padding;
+  @include flex(row, space-between, center);
+}
+.burger-button {
+  @include iconMenu();
+}
+.logo {
+  color: $accents-color;
+  font-size: 2.4rem;
+  font-weight: $font-weight;
+  @include flex(row, space-between, center);
+}
+.sidebar {
+  position: fixed;
+  padding: $primary-padding;
+  width: 220px;
+  min-height: 100vh;
+  top: 0;
+  left: -100%;
+  transition: 0.5s linear;
+  background-color: $primary-color;
+  border-radius: 0 $border-radius $border-radius 0;
+  box-shadow: $primary-shadow;
+  &.open {
+    left: 0;
+  }
+}
+.menu {
+  font-size: 1.8rem;
+  @include flex(column, center, flex-start);
+}
+.menu-close {
+  padding-bottom: $primary-padding;
+  align-self: flex-end;
+}
+.menu-close-button {
+  @include iconMenu();
+}
+.menu-list {
+  padding: 5px 0;
+}
+.menu-item {
+  color: $third-color;
+  text-transform: uppercase;
+  &:hover {
+    color: $accents-color;
+    transition: $hover-effect;
+  }
+}
+.menu-item__selected {
+  color: $accents-color;
+  font-weight: $font-weight;
+}
+.menu-icons {
+  color: $accents-color;
+}

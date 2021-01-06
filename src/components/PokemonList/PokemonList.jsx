@@ -1,7 +1,11 @@
+import PageWrapper from "../PageWrapper/PageWrapper";
+
 const PokemonList = () => {
-    return (
-        <h1>PokemonList</h1>
-    )
-}
+  return (
+    <PageWrapper>
+      <h1>PokemonList</h1>
+    </PageWrapper>
+  );
+};
 
 export default PokemonList;

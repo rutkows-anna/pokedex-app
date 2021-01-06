@@ -1,3 +1,11 @@
+@import 'node_modules/normalize-scss/sass/normalize';
+@include normalize();
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 @import "variables";
 @import "global";
 @import "mixins";
+
+@import "../App.scss";
+@import "../components/Nav/Nav.scss";
+@import "../components/PageWrapper/PageWrapper.scss";

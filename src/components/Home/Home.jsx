@@ -1,7 +1,11 @@
+import PageWrapper from "../PageWrapper/PageWrapper";
+
 const Home = () => {
-    return (
-        <h1>Home</h1>
-    )
-}
+  return (
+    <PageWrapper>
+      <h1>Home</h1>
+    </PageWrapper>
+  );
+};
 
 export default Home;

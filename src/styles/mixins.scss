@@ -1,0 +1,44 @@
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+@mixin iconMenu() {
+  border: none;
+  background-color: transparent;
+  color: $accents-color;
+  font-size: 3.2rem;
+  &:hover {
+    color: $third-color;
+    transition: $hover-effect;
+  }
+  &:focus {
+    outline: none;
+    transform: rotate(180deg);
+  }
+}
+/*
+  @mixin inputStyle() {
+    padding: 20px 28px;
+    margin: 10px;
+    border-radius: $border-radius;
+    box-shadow: $primary-shadow;
+    background-color: $secondary-color;
+    color: $font-color;
+    font-size: $primary-font-size;
+    text-transform: uppercase;
+  } */
+
+@mixin mediaQuery($breakpoint) {
+  @if $breakpoint==xs {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint==xxl {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+}
