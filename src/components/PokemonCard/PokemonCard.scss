@@ -1,0 +1,26 @@
+.card {
+  display: block;
+  padding: 30px;
+  margin: 10px;
+  background-color: $primary-color;
+  border: none;
+  border-radius: $border-radius $border-radius;
+  box-shadow: $primary-shadow;
+  @include flex(column, center, center);
+  &:hover {
+    box-shadow: $secondary-shadow;
+    transform: scale(1.01);
+  }
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: $third-color;
+    text-transform: uppercase;
+  }
+  &__img {
+    max-width: 140px;
+  }
+  @include mediaQuery(xs) {
+    width: 100%;
+  }
+}

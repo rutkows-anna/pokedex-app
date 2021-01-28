@@ -1,0 +1,22 @@
+.home-content {
+  @include flex(column, center, center);
+  text-align: center;
+  &__title {
+    font-weight: 400;
+    font-size: 3.4rem;
+    color: $font-color;
+    text-transform: uppercase;
+  }
+  &__text {
+    font-size: 1.8rem;
+    color: $third-color;
+  }
+  &__icon {
+    margin: 10px;
+    width: 25%;
+    min-width: 160px;
+    height: auto;
+    color: $accents-color-light;
+    font-weight: 300;
+  }
+}

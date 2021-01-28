@@ -1,0 +1,47 @@
+.title {
+  font-size: 2.6rem;
+  font-weight: 300;
+}
+.form {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 30px;
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  box-shadow: $primary-shadow; 
+  @include flex(column, center, center);
+  &__label {
+    align-self: start;
+    font-size: $primary-font-size;
+  }
+  &__input {
+    width: 100%;
+    @include inputStyle();
+  }
+  &__button {
+    width: 70%;
+    padding: 10px 18px;
+    margin: 10px;
+    border: solid 1px $accents_color;
+    background-color: $accents_color;
+    border-radius: $border-radius;
+    color: $secondary-color;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    &:hover {
+      background-color: transparent;
+      color: $accents_color;
+    }
+    &:focus {
+      outline: none;
+      border: solid 1px $accents_color;
+    }
+  }
+  &__error {
+    padding: 5px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    color: $accents_color;
+  }
+}

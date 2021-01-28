@@ -1,10 +1,10 @@
 @mixin flex($direction, $justify, $align) {
   display: flex;
+  flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
-  flex-direction: $direction;
 }
-@mixin iconMenu() {
+@mixin icon() {
   border: none;
   background-color: transparent;
   color: $accents-color;
@@ -18,26 +18,23 @@
     transform: rotate(180deg);
   }
 }
-/*
-  @mixin inputStyle() {
-    padding: 20px 28px;
-    margin: 10px;
-    border-radius: $border-radius;
-    box-shadow: $primary-shadow;
-    background-color: $secondary-color;
-    color: $font-color;
-    font-size: $primary-font-size;
-    text-transform: uppercase;
-  } */
-
+@mixin inputStyle() {
+  padding: 10px 18px;
+  margin: 10px;
+  border-radius: 10px;
+  border: solid 1px $third-color;
+  background-color: transparent;
+  font-size: 1.8rem;
+  color: $third-color;
+  &:focus {
+    outline: none;
+    border: solid 1px $accents_color;
+    color: $third-color;
+  }
+}
 @mixin mediaQuery($breakpoint) {
   @if $breakpoint==xs {
     @media only screen and (max-width: 600px) {
-      @content;
-    }
-  }
-  @if $breakpoint==xxl {
-    @media only screen and (max-width: 1200px) {
       @content;
     }
   }
