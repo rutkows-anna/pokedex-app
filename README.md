@@ -1,5 +1,10 @@
 # pokedex-app
 
+# Fake auth: 
+```
+username: test
+password: test123
+```
 ## Setup
 ```
 # clone or download this repository
