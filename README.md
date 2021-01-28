@@ -1,6 +1,6 @@
 # pokedex-app
 
-# Fake auth: 
+### Fake auth: 
 ```
 username: test
 password: test123
